@@ -43,7 +43,7 @@ function main(workbook: ExcelScript.Workbook) {
     }
 
     // Obtener todas las filas (sin encabezados ni totales)
-    const rows = table.getRangeBetweenHeaderAndTotal().getValues();
+  const rows = table.getRangeBetweenHeaderAndTotal().getTexts();
 
     // Definimos tipo para alerta
     interface Alerta {
