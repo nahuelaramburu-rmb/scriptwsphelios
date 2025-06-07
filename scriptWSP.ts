@@ -43,7 +43,7 @@ function main(workbook: ExcelScript.Workbook) {
     }
 
     // Obtener todas las filas (sin encabezados ni totales)
-  const rows = table.getRangeBetweenHeaderAndTotal().getTexts();
+    const rows = table.getRangeBetweenHeaderAndTotal().getTexts();
 
     // Definimos tipo para alerta
     interface Alerta {
@@ -86,7 +86,7 @@ function main(workbook: ExcelScript.Workbook) {
     }
 
     // --- FILTRO DE ESTADOS: Ajusta estos valores según los estados que NO quieres mostrar como "en curso" ---
-    const estadosExcluidos = ["Cerrado", "Resuelto", "Finalizado", "Completado", "Cerrada", "RESOLVIDA"];
+    const estadosExcluidos = ["Cerrado", "Resuelto", "Finalizado", "Completado","Normalizado", "Cerrada", "RESOLVIDA"];
 
     // Mapa para agrupar alertas por banco y una lista para alertas de servicios externos
     const alertasInternasPorBanco: { [key: string]: Alerta[] } = {
